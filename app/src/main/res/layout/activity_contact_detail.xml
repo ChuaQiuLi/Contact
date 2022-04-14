@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sg.edu.rp.c346.id20007649.contacts.ContactDetail">
+
+    <!--image view for contact-->
+
+    <ImageView
+        android:id="@+id/idIVContact"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/purple_200"
+        android:padding="50dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:tint="@color/white" />
+
+    <!--text view for displaying user name-->
+    <TextView
+        android:id="@+id/idTVName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idIVContact"
+        android:background="@color/purple_200"
+        android:padding="8dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!--cardview for displaying user contact-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVName"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--image view for making a call -->
+            <ImageView
+                android:id="@+id/idIVCall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_baseline_call_24" />
+
+            <!--text view for displaying user contact-->
+            <TextView
+                android:id="@+id/idTVPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_toStartOf="@id/idIVMessage"
+                android:layout_toEndOf="@id/idIVCall"
+                android:layout_toRightOf="@id/idIVCall"
+                android:text="@string/phone" />
+
+            <!--image view for displaying message icon-->
+            <ImageView
+                android:id="@+id/idIVMessage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_baseline_message_24" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
+        android:clickable="true"
+        android:contentDescription="Delete Contact"
+        android:src = "@drawable/ic_baseline_delete_24"
+        app:elevation="8dp"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+</RelativeLayout>
