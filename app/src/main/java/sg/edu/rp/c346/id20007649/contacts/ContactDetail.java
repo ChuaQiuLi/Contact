@@ -57,6 +57,7 @@ public class ContactDetail extends AppCompatActivity {
         messageIV = findViewById(R.id.idIVMessage);
         fabDelete = findViewById(R.id.fabDelete);
 
+
         // on below line adding click listener for our calling image view.
         callIV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,6 +121,8 @@ public class ContactDetail extends AppCompatActivity {
             }
 
         });
+
+
 
 
     }
